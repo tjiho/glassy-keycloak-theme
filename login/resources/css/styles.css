@@ -1,0 +1,110 @@
+@import url('https://static.ppsfleet.navy/fonts/inter/style.css');
+@import url('https://fonts.ppsfleet.navy/ibm_plex/Web/css/ibm-plex-sans.css');
+
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans;
+    background-image: url('../img/toulouse.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+
+}
+
+h1 {
+    color: white;
+    font-weight: 900;
+    font-size: 32px;
+}
+main {
+    display:flex;
+    flex:1;
+}
+
+#secondary-content {
+    flex: 2;
+}
+
+#primary-content {
+    backdrop-filter: blur(10px);
+    background-color: #b0b0b042;
+    padding: 1rem;
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 1px solid white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+input {
+    padding: 1em;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    min-width: 18em;
+    margin-top:0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ffffffb5;
+    background-color: #ffffffb5;
+}
+.pf-v5-c-input-group  {
+    display:flex;
+    gap:0.25rem;
+}
+
+.pf-v5-c-input-group__item.pf-m-fill {
+    flex-grow: 1;
+}
+
+.pf-v5-c-input-group__item button {
+     min-width: fit-content;
+}
+
+.pf-v5-c-form__helper-text {
+    border-left: 2px solid;
+    margin-top: 4px;
+    padding: 0.25em 1em;
+    font-style: italic;
+}
+
+.pf-v5-c-form__helper-text:has(.pf-m-error) {
+    border-color:red;
+}
+
+button {
+    padding: 1em;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    min-width: 18em;
+    margin-top:0.25rem;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+button.pf-m-primary {
+    font-weight: bold;
+    background-color: blueviolet;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#kc-login {
+    margin: auto;
+    display: block;
+    margin-top:0.5em;
+}
+.pf-v5-c-form__group {
+    margin-bottom: 1rem;
+}
