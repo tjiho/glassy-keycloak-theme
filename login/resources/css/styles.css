@@ -43,7 +43,7 @@ main {
     border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-input {
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
     padding: 1em;
     border-radius: 8px;
     font-size: 16px;
@@ -56,9 +56,22 @@ input {
     background-color: #ffffffb5;
     border: 1px solid #626262b5;
 }
+
 .pf-v5-c-input-group  {
     display:flex;
     gap:0.25rem;
+}
+
+.pf-v5-c-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+input[type="checkbox"] {
+    width: fit-content;
+    min-width: auto;
+    margin: 0;
 }
 
 .pf-v5-c-input-group__item.pf-m-fill {
@@ -68,6 +81,10 @@ input {
 .pf-v5-c-input-group__item button {
      min-width: fit-content;
 }
+
+
+
+input[type=]
 
 .pf-v5-c-form__helper-text {
     border-left: 2px solid;
@@ -80,7 +97,7 @@ input {
     border-color:red;
 }
 
-button {
+button, input[type="submit"] {
     padding: 1em;
     border-radius: 8px;
     font-size: 16px;
@@ -92,7 +109,7 @@ button {
     background-color: #fff;
 }
 
-button.pf-m-primary {
+button.pf-m-primary, input[type="submit"].pf-m-primary {
     font-weight: bold;
     background-color: blueviolet;
     color: white;
