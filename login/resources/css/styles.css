@@ -124,7 +124,7 @@ main {
         font-weight: bold;
         color: black;
         text-align: center;
-        display: inline-block;
+        display: block;
     }
 
     button.pf-v5-c-button {
