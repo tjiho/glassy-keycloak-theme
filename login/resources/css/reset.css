@@ -1,0 +1,35 @@
+/* bypass base theme */
+#primary-content {
+    span.pf-v5-c-form-control,                                                                                                                
+    div.pf-v5-c-form-control,                                                                                                                 
+    .pf-v5-c-input-group,
+    .pf-v5-c-login__container,
+    .pf-v5-c-login__main,
+    input,
+    button,
+    .pf-v5-c-input-group__item,
+    .pf-v5-c-login__main-header,
+    .pf-v5-c-form__group,
+    .pf-v5-c-form__group-label,
+    .pf-v5-c-form__label,
+    .pf-v5-c-form__label-text,
+    .pf-v5-c-form,
+    .pf-v5-c-login__main-footer,
+    .pf-v5-c-title,
+    .pf-v5-c-login__main-header-utilities,
+    .pf-v5-c-login,
+    .pf-v5-c-login__main-body,
+    #kc-form,
+    #kc-form-wrapper,
+    #kc-form-login,
+    .pf-v5-c-form__actions,
+    .pf-v5-c-button {                                                                                                                         
+        all: revert;                          
+        box-sizing: border-box;
+    }
+}
+
+#primary-content :is(.pf-v5-c-form-control, .pf-v5-c-button)::before,                                                                                      
+#primary-content :is(.pf-v5-c-form-control, .pf-v5-c-button)::after {                                                                                      
+    content: none;                      
+}  

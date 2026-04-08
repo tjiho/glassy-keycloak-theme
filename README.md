@@ -2,6 +2,10 @@
 
 ![screenshot](./screenshot.jpg)
 
+### Compatibility
+
+Tested against Keycloak **26.5.x** (inherits from the `keycloak.v2` base theme and PatternFly v5 classes).
+
 ### Usage
 
 Clone the theme inside the keycloak theme directory. On docker images, themes are located in `/opt/keycloak/themes`

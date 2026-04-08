@@ -1,128 +1,154 @@
 @import url('https://static.ppsfleet.navy/fonts/inter/style.css');
 @import url('https://fonts.ppsfleet.navy/ibm_plex/Web/css/ibm-plex-sans.css');
+@import url('./reset.css');
 
-html,body {
+html, body {
     margin: 0;
     padding: 0;
-    height: 100%
+    height: 100%;
 }
 
 body {
-    font-family: 'IBM Plex Sans', sans;
+    font-family: 'IBM Plex Sans', sans-serif;
     background-image: url('../img/toulouse.jpeg');
     background-attachment: fixed;
     background-size: cover;
-    display:flex;
+    background-position: center;
+    display: flex;
     flex-direction: column;
-
+    color: black;
 }
 
-h1 {
-    font-weight: 900;
-    font-size: 32px;
-}
 main {
-    display:flex;
-    flex:1;
+    display: flex;
+    flex: 1;
+    min-height: 0; /* override flex default (auto) so children can shrink below content size */
 }
 
 #secondary-content {
-    flex: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#welcome-title {
+    color: white;
+    font-weight: 900;
+    font-size: 3rem;
+    text-shadow: 0 0px 9px rgb(0, 0, 0);
+    margin: 0;
+    text-align: center;
 }
 
 #primary-content {
+    width: 38%;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     background-color: #ffffffa3;
     color: black;
-    padding: 1rem;
-    flex: 1;
-    height: 100%;
+    padding: 2rem 1.5rem;
     box-sizing: border-box;
-    border-left: 1px solid white;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
-    padding: 1em;
-    border-radius: 8px;
-    font-size: 16px;
-    border: none;
-    min-width: 18em;
-    margin-top:0.25rem;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ffffffb5;
-    background-color: #ffffffb5;
-    border: 1px solid #626262b5;
-}
-
-.pf-v5-c-input-group  {
-    display:flex;
-    gap:0.25rem;
-}
-
-.pf-v5-c-check {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-}
-
-input[type="checkbox"] {
-    width: fit-content;
-    min-width: auto;
-    margin: 0;
-}
-
-.pf-v5-c-input-group__item.pf-m-fill {
-    flex-grow: 1;
-}
-
-.pf-v5-c-input-group__item button {
-     min-width: fit-content;
-}
-
-
-
-input[type=]
-
-.pf-v5-c-form__helper-text {
-    border-left: 2px solid;
-    margin-top: 4px;
-    padding: 0.25em 1em;
-    font-style: italic;
-}
-
-.pf-v5-c-form__helper-text:has(.pf-m-error) {
-    border-color:red;
-}
-
-button, input[type="submit"] {
-    padding: 1em;
-    border-radius: 8px;
-    font-size: 16px;
-    border: none;
-    min-width: 18em;
-    margin-top:0.25rem;
-    box-sizing: border-box;
-    border: 1px solid #000;
-    background-color: #fff;
-}
-
-button.pf-m-primary, input[type="submit"].pf-m-primary {
-    font-weight: bold;
-    background-color: blueviolet;
-    color: white;
-    border-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
+    align-items: safe center;    /* `safe` falls back to start when centering would clip the top */
+    justify-content: safe center;
+
+    margin: 10px;
+    border-radius: 10px;
 }
 
-#kc-login {
-    margin: auto;
-    display: block;
-    margin-top:0.5em;
+/* bypass reset */
+#glassy-template #primary-content {
+    #kc-page-title {
+        margin: 0;
+        font-weight: 900;
+        font-size: 2rem;
+        color: black;
+        margin: 0 0 1rem 0;
+    }
+
+    .pf-v5-c-login {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    /*TODO*/
+    .pf-v5-c-login__main-header-utilities {
+        display: none;
+    }
+
+    .pf-v5-c-input-group {
+        display: flex;
+
+        .pf-m-fill {
+            flex: 1;
+        }
+    }
+
+    .pf-v5-c-form__group {
+        margin-bottom: 1rem;
+    }
+
+    .pf-v5-c-form__label {
+        color: black;
+        font-weight: 600;
+    }
+
+    .pf-v5-c-form-control {
+        display: block;
+
+        input[type='text'], input[type='password'] {
+            width: 100%;
+            padding: .75rem;
+            background-color: #ffffffb5;
+            border: 1px solid #626262b5;
+                border-radius: 8px;
+
+        }
+    }
+
+    .pf-v5-c-input-group__item .pf-v5-c-form-control input {
+        border-radius: 8px 0px 0px 8px;
+        border-right-width:0px;
+    }
+
+    .pf-v5-c-input-group__item button {
+        border-radius: 0px 8px 8px 0px;
+    }
+
+    .pf-v5-c-button {
+                border-radius: 8px;
+
+        padding: .75rem;
+        border: none;
+        font-weight: bold;
+                border: none;
+                 border: 1px solid #626262b5;
+
+        &.pf-m-block {
+            width: 100%;
+        }
+        &.pf-m-primary {
+                    background-color: #8A2BE2;
+                    color: white;
+
+
+        }
+        
+    }
 }
-.pf-v5-c-form__group {
-    margin-bottom: 1rem;
+
+@media (max-width: 900px) {
+    #primary-content {
+        flex: 1;
+        width: auto;
+    }
+
+    #secondary-content {
+        display: none;
+    }
 }
