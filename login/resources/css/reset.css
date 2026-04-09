@@ -23,6 +23,7 @@
     #kc-form-wrapper,
     #kc-form-login,
     .pf-v5-c-form__actions,
+    .pf-v5-c-alert,
     .pf-v5-c-button {                                                                                                                         
         all: revert;                          
         box-sizing: border-box;

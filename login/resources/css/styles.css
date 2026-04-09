@@ -101,7 +101,7 @@ main {
     .pf-v5-c-form-control {
         display: block;
 
-        input[type='text'], input[type='password'] {
+        input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
             width: 100%;
             padding: .75rem;
             background-color: #ffffffb5;
@@ -111,7 +111,11 @@ main {
         }
     }
 
-    .pf-v5-c-input-group__item .pf-v5-c-form-control input {
+    .pf-v5-c-form-control__utilities {
+        display: none;
+    }
+
+    .pf-v5-c-input-group__item .pf-v5-c-form-control input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
         border-radius: 8px 0px 0px 8px;
         border-right-width:0px;
     }
